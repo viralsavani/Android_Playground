@@ -23,12 +23,13 @@ public class MainActivity extends ActionBarActivity implements SeekBar.OnSeekBar
 
     EditText inputValue;
     TextView monthlyPaymentTextView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         inputValue = (EditText) findViewById(R.id.amountBorrowed);
+        SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar);
+        seekBar.setOnSeekBarChangeListener(this);
     }
 
     /**
@@ -47,6 +48,14 @@ public class MainActivity extends ActionBarActivity implements SeekBar.OnSeekBar
 
                 RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroupLoanTerm);
                 RadioButton radioLoanTerm = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
+
+                /**
+                 * Radio button contains values as "10 Years Loan"
+                 * To get the 10, string split with space i.e. "//s"
+                 * and then get the first from the String[] and
+                 * parse it to Integer
+                 */
+
                 String radioValue = radioLoanTerm.getText().toString();
                 String[] radioValueSplit = radioValue.split("\\s");
 
@@ -68,8 +77,8 @@ public class MainActivity extends ActionBarActivity implements SeekBar.OnSeekBar
                     float monthlyInterest = (float) interestRate / 1200;
                     int numberOfMonths = Integer.parseInt(radioValueSplit[0]);
                     float monthlyPayment;
-                    float taxInsurance;
 
+                    float taxInsurance;
                     if(taxInsuranceCheck.isChecked()){
                         taxInsurance = (float) (principalAmount * 0.1) / 100;
                     }else{
@@ -95,7 +104,9 @@ public class MainActivity extends ActionBarActivity implements SeekBar.OnSeekBar
 
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
+        int interestRate = seekBar.getProgress();
+        TextView seekBarLabel = (TextView) findViewById(R.id.seekBarLabel);
+        seekBarLabel.setText(String.valueOf(interestRate));
     }
 
     @Override

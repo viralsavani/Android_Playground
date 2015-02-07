@@ -11,5 +11,6 @@
     <string name="loanTerm30">30 Years Loan</string>
     <string name="calculateButton">Calculate Mortgage</string>
     <string name="setRateLabel">Set Interest Rate</string>
+    <string name="seekBarValue">10</string>
 
 </resources>
