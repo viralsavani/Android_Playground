@@ -31,21 +31,39 @@ public class MainActivity extends ActionBarActivity implements SeekBar.OnSeekBar
         inputValue = (EditText) findViewById(R.id.amountBorrowed);
     }
 
+    /**
+     * OnClick of "Calculate Mortgage" button will call to calculateMortgage method
+     * which takes View as argument
+     */
+
     public void calculateMortgage(View view){
         switch(view.getId()){
             case R.id.calculateButton:
+
+                /**
+                 * Get the entire radioGroup and select only one radioButton which is selected.
+                 * No need to make multiple radio buttons and then check which one is selected.
+                 */
+
                 RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroupLoanTerm);
                 RadioButton radioLoanTerm = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
                 String radioValue = radioLoanTerm.getText().toString();
                 String[] radioValueSplit = radioValue.split("\\s");
+
+                /**
+                 * Check if input is not null, then only proceed
+                 * If null simple output a TOAST and return.
+                 */
 
                 if(inputValue.getText().toString().trim().length() == 0){
                     Toast.makeText(this, "Please Enter Valid Amount !", Toast.LENGTH_LONG).show();
                     return;
                 }else{
                     CheckBox taxInsuranceCheck = (CheckBox) findViewById(R.id.taxInsuranceCheckBox);
+
                     SeekBar interestRateBar = (SeekBar) findViewById(R.id.seekBar);
                     int interestRate = interestRateBar.getProgress();
+
                     Double principalAmount = Double.parseDouble(inputValue.getText().toString());
                     float monthlyInterest = (float) interestRate / 1200;
                     int numberOfMonths = Integer.parseInt(radioValueSplit[0]);
