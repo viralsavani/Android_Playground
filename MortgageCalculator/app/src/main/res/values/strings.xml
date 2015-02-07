@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Mortgage Calculator</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="editTextHint">Amount To be Borrowed...</string>
+    <string name="loanTerm15">15 Years Loan</string>
+    <string name="loanTerm20">20 Years Loan</string>
+    <string name="loanTerm30">30 Years Loan</string>
+    <string name="calculateButton">Calculate Mortgage</string>
+    <string name="setRateLabel">Set Interest Rate</string>
+
+</resources>
