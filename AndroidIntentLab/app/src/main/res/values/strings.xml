@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidIntentLab</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="web_button">Web Browser</string>
+    <string name="tele_button">Make Call</string>
+</resources>
