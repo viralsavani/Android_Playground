@@ -1,6 +1,7 @@
 package android.csulb.edu.zoodirectory;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -75,8 +76,15 @@ public class AnimalListing extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.information) {
+            Intent informationIntent = new Intent(AnimalListing.this, ZooInformation.class);
+            startActivity(informationIntent);
+        }
+
+        if(id == R.id.uninstall){
+           Uri packageURI = Uri.parse("package:android.csulb.edu.zoodirectory");
+           Intent uninstallIntent = new Intent(Intent.ACTION_DELETE, packageURI);
+           startActivity(uninstallIntent);
         }
 
         return super.onOptionsItemSelected(item);

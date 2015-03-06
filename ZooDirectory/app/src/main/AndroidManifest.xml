@@ -20,6 +20,10 @@
             android:name=".AnimalDetail"
             android:label="@string/title_activity_animal_detail" >
         </activity>
+        <activity
+            android:name=".ZooInformation"
+            android:label="@string/title_activity_zoo_information" >
+        </activity>
     </application>
 
 </manifest>
