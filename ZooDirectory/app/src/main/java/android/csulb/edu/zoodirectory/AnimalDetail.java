@@ -127,11 +127,31 @@ public class AnimalDetail extends ActionBarActivity {
                         "nter for a long period (up to 100 days) of sleep similar to hibernation.[2]";
                 animalDescTextView.setText(animalDesc);
                 break;
+
+            case "King Cobra":
+                animalNameTextView.setText("KING COBRA");
+                imageView.setImageResource(R.mipmap.pic6);
+
+                animalDesc = "The king cobra (Ophiophagus hannah) is an elapid found predominantly in forests from India t" +
+                        "hrough Southeast Asia. This species is the world's longest venomous snake, with a length up to 18" +
+                        ".5 to 18.8 ft (5.6 to 5.7 m).[2] Despite the word \"cobra\" in its common name, this snake is not " +
+                        "a member of the Naja genus (\"true cobras\"), which contains most cobra species, but the sole membe" +
+                        "r of its own genus. It preys chiefly on other snakes and occasionally on some other vertebrates, su" +
+                        "ch as lizards and rodents. The king cobra is considered to be a dangerous snake and has a fearsome r" +
+                        "eputation in its range,[3][4][5] although it typically avoids confrontation with humans if possible." +
+                        "[3] It is also considered culturally significant, has many superstitions around it and said to be as" +
+                        "sociated with god in some Indian subcontinent cultures"+
+                        "The king cobra averages at 3 to 4 m (9.8 to 13.1 ft) in length and typically weighs about 6 kg (" +
+                        "13 lb). The longest known specimen was kept captive at the London Zoo, and grew to around 18.5 to " +
+                        "18.8 ft (5.6 to 5.7 m) before being euthanised upon the outbreak of World War II. The heaviest wild sp" +
+                        "ecimen was caught at Royal Island Club in Singapore in 1951, which weighed 12 kilograms (26 lb) and m" +
+                        "easured 4.8 m (15.7 ft), though an even heavier captive specimen was kept at New York Zoological Park" +
+                        " and was measured as 12.7 kilograms (28 lb) at 4.4 m (14.4 ft) long in 1972.[7] King cobras are sexua" +
+                        "lly dimorphic in size, with males reaching larger sizes than females. The length and mass of the snak" +
+                        "es highly depend on their localities and some other factors.";
+                animalDescTextView.setText(animalDesc);
+                break;
         }
-
-
-
-
     }
 
 
@@ -144,12 +164,7 @@ public class AnimalDetail extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.information) {
             Intent informationIntent = new Intent(AnimalDetail.this, ZooInformation.class);
             startActivity(informationIntent);

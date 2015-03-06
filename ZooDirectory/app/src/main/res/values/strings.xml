@@ -6,4 +6,8 @@
     <string name="uninstall">Uninstall</string>
     <string name="title_activity_animal_detail">AnimalDetail</string>
     <string name="title_activity_zoo_information">ZooInformation</string>
+    <string name="dialog_message">This Is very Scary Animal. Do you want to proceed ?</string>
+    <string name="dialog_title">CAUTION !</string>
+    <string name="ok">I am a Daredevil</string>
+    <string name="cancel">Take me back</string>
 </resources>
