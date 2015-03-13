@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Lab6</string>
+
+    <string name="mainTextView">LAB-6 Sensor Demo</string>
+    <string name="weatherButton">Weather Demo</string>
+    <string name="shakeButton">Shake Sensor Demo</string>
+    <string name="title_activity_weather">WeatherActivity</string>
+    
+    <string name="nameDefault">Default</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_shake">shakeActivity</string>
+    <string name="shakeView">SHAKE TO CHANGE COLOR AND GET A TOAST MESSAGE !</string>
+</resources>
