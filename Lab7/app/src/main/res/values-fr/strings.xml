@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="edit_hint">Entrez votre nom...</string>
+    <string name="nameButton">Appuyez sur moi!</string>
+    <string name="hello">Bonjour</string>
+    <string name="layoutHeader">Mode Portrait</string>
+</resources>

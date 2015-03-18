@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="edit_hint">તમારું નામ દાખલ કરો ...</string>
+    <string name="nameButton">અહીં ક્લિક કરો!</string>
+    <string name="hello">કેમ છો</string>
+    <string name="layoutHeader">પોટ્રેટ લેઆઉટ</string>
+
+</resources>
