@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lab7_testing</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="spinnerHeader">Spinner Activity</string>
+    <string name="spinnerDesc">The values selected in spinner will remain persistent even activity is destroyed</string>
+</resources>
